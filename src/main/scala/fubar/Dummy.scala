@@ -19,6 +19,8 @@ object MyTypeClass {
   // convenience constructor so I don't need to use implicitly
   def apply[T](implicit evidence: MyTypeClass[T]): Aux[T, evidence.In, evidence.Out] = evidence
 
+
+
   // known type class members
   implicit val greeterToTypeclass: Aux[Greeter, String, String] = new MyTypeClass[Greeter] {
     type In = String
@@ -97,7 +99,8 @@ object Fakir {
 }
 
 
-class Charleton[T,In0, Out0]()
+
+
 
 object Main extends App {
 
@@ -154,4 +157,31 @@ object Main3 extends App {
 
 }
 
+/* // bah wont compile
+case class Charleton[T](foo: T)(implicit ev: MyTypeClass[T])(implicit sayThis: ev.type.In ) {
+  import SomeApi._
+  //  implicit def tcToAux[T](ev: MyTypeClass[T]): Aux[T, ev.In, ev.Out] = ev
+
+  //  val tc = MyTypeClass[T]
+  val tc = implicitly[MyTypeClass[T]]
+
+  def doVoodoo() = {
+    //  voodoo(foo, sayThis);
+    tc.doMagic(foo, sayThis)
+  }
+}
+
+object Main4 extends App {
+
+  //bring typeclass instance into scope
+  import MyTypeClass._
+  import SomeApi._
+
+  val charleton = Charleton(Greeter("YOODOO karl"), "Howzithangin")
+  println("Greeting yoodoo:- ")
+  println(fakir.doVoodoo())
+
+
+}
+ */
 

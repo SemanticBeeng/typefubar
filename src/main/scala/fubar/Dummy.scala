@@ -9,6 +9,8 @@ trait MyTypeClass[T] {
   type Out
 
   def doMagic(foo: T, param1: In): Out
+
+  def almostDoMagic(foo: T, param1: this.type#In): Out
 }
 
 object MyTypeClass {
@@ -16,7 +18,7 @@ object MyTypeClass {
   //aux pattern
   type Aux[T0, In0, Out0] = MyTypeClass[T0] {type In = In0; type Out = Out0}
 
-  // convenience constructor so I don't need to use implicitly
+  // convenience constructor so I don't need to use implicitly which would loose type info of In Out
   def apply[T](implicit evidence: MyTypeClass[T]): Aux[T, evidence.In, evidence.Out] = evidence
 
 
@@ -27,6 +29,8 @@ object MyTypeClass {
     type Out = String
 
     override def doMagic(foo: Greeter, param1: In): Out = foo.greeting(param1)
+
+    override def almostDoMagic(foo: Greeter, param1: this.type#In): Out = foo.greeting(param1)
   }
 
   implicit val imAnAlienToTypeclass: Aux[ImAnAlien.type, Int, String] = new MyTypeClass[ImAnAlien.type] {
@@ -34,6 +38,8 @@ object MyTypeClass {
     type Out = String
 
     override def doMagic(foo: ImAnAlien.type, param1: In): Out = foo.say(param1)
+
+    override def almostDoMagic(foo: ImAnAlien.type, param1: this.type#In): Out = foo.say(param1)
   }
 
 }
@@ -48,7 +54,7 @@ case class Greeter(name: String) {
 case object ImAnAlien {
 
   @tailrec
-  def sayThis(thing: String, accumlator: String, numTimes: Int): String = numTimes match {
+  private def sayThis(thing: String, accumlator: String, numTimes: Int): String = numTimes match {
     //base case
     case 0 => accumlator
     //recurse
@@ -62,6 +68,24 @@ case object ImAnAlien {
 }
 
 object SomeApi {
+
+  // wont compile due to inability to resolve type In or Out in same param list
+ /* def nonimplicitfail[T](thing: T, shazam: MyTypeClass[T], sayThis: shazam.In): shazam.Out = {
+     val out = shazam.doMagic(thing, sayThis);
+    return out;
+  }*/
+
+  // wont work because doMagic expects shazam.In actually providing MyTypeClass[T]#In
+/*  def nonimplicitfail2[T](thing: T, shazam: MyTypeClass[T], sayThis: MyTypeClass[T]#In): shazam.Out = {
+    val out = shazam.doMagic(thing, sayThis);
+    return out;
+  }*/
+
+  def nonimplicitfail3[T](thing: T, shazam: MyTypeClass[T], sayThis: MyTypeClass[T]#In): shazam.Out = {
+    val out = shazam.almostDoMagic(thing, sayThis);
+    return out;
+  }
+
   def voodoo[T, In0, Out0](foo: T, sayThis: In0)(implicit ev: MyTypeClass.Aux[T, In0, Out0]): Out0 = {
     val tc = MyTypeClass[T]
     tc.doMagic(foo, sayThis)
@@ -69,8 +93,9 @@ object SomeApi {
   }
 
   def hoodoo[T, In0, Out0](foo: T, sayThis: In0)(implicit ev: MyTypeClass.Aux[T, In0, Out0]): Out0 = {
-    voodoo(foo, sayThis);
+    voodoo(foo, sayThis)
   }
+
 }
 
 case class Yoodoo[T, In0, Out0](foo: T, sayThis: In0)(implicit ev: MyTypeClass.Aux[T, In0, Out0]) {

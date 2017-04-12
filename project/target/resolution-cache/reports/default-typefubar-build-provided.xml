@@ -9,7 +9,7 @@
 		extra-sbtVersion="0.13"
 		conf="provided"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20161207092648"/>
+		date="20170322072751"/>
 	<dependencies>
 		<module organisation="org.scala-sbt" name="sbt">
 			<revision name="0.13.13" status="release" pubdate="20161028130837" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
@@ -137,7 +137,7 @@
 		<module organisation="org.scala-sbt" name="test-interface">
 			<revision name="1.0" status="release" pubdate="20130629084435" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-sbt.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="45">
 				<license name="BSD" url="https://github.com/sbt/test-interface/blob/master/LICENSE"/>
-				<metadata-artifact status="no" details="" size="2595" time="0" location="/home/robertk/.ivy2/cache/org.scala-sbt/test-interface/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom"/>
+				<metadata-artifact status="no" details="" size="2589" time="0" location="/home/robertk/.ivy2/cache/org.scala-sbt/test-interface/ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom"/>
 				<caller organisation="org.scala-sbt" name="testing" conf="compile" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="0.13.13"/>
 				<caller organisation="org.scala-sbt" name="test-agent" conf="compile" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="0.13.13"/>
 				<artifacts>
@@ -247,7 +247,7 @@
 		<module organisation="org.spire-math" name="json4s-support_2.10">
 			<revision name="0.6.0" status="release" pubdate="20140924060847" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/non/jawn/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="37">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="no" details="" size="3061" time="0" location="/home/robertk/.ivy2/cache/org.spire-math/json4s-support_2.10/ivy-0.6.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/spire-math/json4s-support_2.10/0.6.0/json4s-support_2.10-0.6.0.pom"/>
+				<metadata-artifact status="no" details="" size="3031" time="0" location="/home/robertk/.ivy2/cache/org.spire-math/json4s-support_2.10/ivy-0.6.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/spire-math/json4s-support_2.10/0.6.0/json4s-support_2.10-0.6.0.pom"/>
 				<caller organisation="org.scala-sbt" name="serialization_2.10" conf="default, compile, runtime, master" rev="0.6.0" rev-constraint-default="0.6.0" rev-constraint-dynamic="0.6.0" callerrev="0.1.2"/>
 				<artifacts>
 					<artifact name="json4s-support_2.10" type="jar" ext="jar" status="no" details="" size="7601" time="0" location="/home/robertk/.ivy2/cache/org.spire-math/json4s-support_2.10/jars/json4s-support_2.10-0.6.0.jar">
@@ -257,9 +257,9 @@
 			</revision>
 		</module>
 		<module organisation="org.spire-math" name="jawn-parser_2.10">
-			<revision name="0.6.0" status="release" pubdate="20140924060838" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/non/jawn/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), master(compile), runtime, compile(*), master" position="36">
+			<revision name="0.6.0" status="release" pubdate="20140924060838" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/non/jawn/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="36">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
-				<metadata-artifact status="no" details="" size="2758" time="0" location="/home/robertk/.ivy2/cache/org.spire-math/jawn-parser_2.10/ivy-0.6.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.10/0.6.0/jawn-parser_2.10-0.6.0.pom"/>
+				<metadata-artifact status="no" details="" size="2740" time="0" location="/home/robertk/.ivy2/cache/org.spire-math/jawn-parser_2.10/ivy-0.6.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.10/0.6.0/jawn-parser_2.10-0.6.0.pom"/>
 				<caller organisation="org.spire-math" name="json4s-support_2.10" conf="compile, runtime" rev="0.6.0" rev-constraint-default="0.6.0" rev-constraint-dynamic="0.6.0" callerrev="0.6.0"/>
 				<caller organisation="org.scala-sbt" name="serialization_2.10" conf="default, compile, runtime, master" rev="0.6.0" rev-constraint-default="0.6.0" rev-constraint-dynamic="0.6.0" callerrev="0.1.2"/>
 				<artifacts>
@@ -272,7 +272,7 @@
 		<module organisation="org.json4s" name="json4s-core_2.10">
 			<revision name="3.2.10" status="release" pubdate="20140514031913" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/json4s/json4s" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="33">
 				<license name="ASL" url="http://github.com/json4s/json4s/raw/HEAD/LICENSE"/>
-				<metadata-artifact status="no" details="" size="2962" time="0" location="/home/robertk/.ivy2/cache/org.json4s/json4s-core_2.10/ivy-3.2.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-core_2.10/3.2.10/json4s-core_2.10-3.2.10.pom"/>
+				<metadata-artifact status="no" details="" size="2938" time="0" location="/home/robertk/.ivy2/cache/org.json4s/json4s-core_2.10/ivy-3.2.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-core_2.10/3.2.10/json4s-core_2.10-3.2.10.pom"/>
 				<caller organisation="org.scala-sbt" name="serialization_2.10" conf="default, compile, runtime, master" rev="3.2.10" rev-constraint-default="3.2.10" rev-constraint-dynamic="3.2.10" callerrev="0.1.2"/>
 				<artifacts>
 					<artifact name="json4s-core_2.10" type="jar" ext="jar" status="no" details="" size="584691" time="0" location="/home/robertk/.ivy2/cache/org.json4s/json4s-core_2.10/jars/json4s-core_2.10-3.2.10.jar">
@@ -282,8 +282,8 @@
 			</revision>
 		</module>
 		<module organisation="com.thoughtworks.paranamer" name="paranamer">
-			<revision name="2.6" status="release" pubdate="20131009145654" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="35">
-				<metadata-artifact status="no" details="" size="4159" time="0" location="/home/robertk/.ivy2/cache/com.thoughtworks.paranamer/paranamer/ivy-2.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6.pom"/>
+			<revision name="2.6" status="release" pubdate="20131009145654" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="35">
+				<metadata-artifact status="no" details="" size="4124" time="0" location="/home/robertk/.ivy2/cache/com.thoughtworks.paranamer/paranamer/ivy-2.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.6/paranamer-2.6.pom"/>
 				<caller organisation="org.json4s" name="json4s-core_2.10" conf="compile, runtime" rev="2.6" rev-constraint-default="2.6" rev-constraint-dynamic="2.6" callerrev="3.2.10"/>
 				<artifacts>
 					<artifact name="paranamer" type="jar" ext="jar" status="no" details="" size="32806" time="0" location="/home/robertk/.ivy2/cache/com.thoughtworks.paranamer/paranamer/jars/paranamer-2.6.jar">
@@ -293,9 +293,9 @@
 			</revision>
 		</module>
 		<module organisation="org.json4s" name="json4s-ast_2.10">
-			<revision name="3.2.10" status="release" pubdate="20140514031837" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/json4s/json4s" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="34">
+			<revision name="3.2.10" status="release" pubdate="20140514031837" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/json4s/json4s" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="34">
 				<license name="ASL" url="http://github.com/json4s/json4s/raw/HEAD/LICENSE"/>
-				<metadata-artifact status="no" details="" size="2522" time="0" location="/home/robertk/.ivy2/cache/org.json4s/json4s-ast_2.10/ivy-3.2.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-ast_2.10/3.2.10/json4s-ast_2.10-3.2.10.pom"/>
+				<metadata-artifact status="no" details="" size="2516" time="0" location="/home/robertk/.ivy2/cache/org.json4s/json4s-ast_2.10/ivy-3.2.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/json4s/json4s-ast_2.10/3.2.10/json4s-ast_2.10-3.2.10.pom"/>
 				<caller organisation="org.spire-math" name="json4s-support_2.10" conf="compile, runtime" rev="3.2.10" rev-constraint-default="3.2.10" rev-constraint-dynamic="3.2.10" callerrev="0.6.0"/>
 				<caller organisation="org.json4s" name="json4s-core_2.10" conf="compile, runtime" rev="3.2.10" rev-constraint-default="3.2.10" rev-constraint-dynamic="3.2.10" callerrev="3.2.10"/>
 				<artifacts>
@@ -318,9 +318,9 @@
 			</revision>
 		</module>
 		<module organisation="org.scalamacros" name="quasiquotes_2.10">
-			<revision name="2.0.1" status="release" pubdate="20150303215226" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/scalamacros/paradise" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="32">
+			<revision name="2.0.1" status="release" pubdate="20150928011915" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/scalamacros/paradise" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="32">
 				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html"/>
-				<metadata-artifact status="no" details="" size="2742" time="0" location="/home/robertk/.ivy2/cache/org.scalamacros/quasiquotes_2.10/ivy-2.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalamacros/quasiquotes_2.10/2.0.1/quasiquotes_2.10-2.0.1.pom"/>
+				<metadata-artifact status="no" details="" size="2730" time="0" location="/home/robertk/.ivy2/cache/org.scalamacros/quasiquotes_2.10/ivy-2.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scalamacros/quasiquotes_2.10/2.0.1/quasiquotes_2.10-2.0.1.pom"/>
 				<caller organisation="org.scala-lang.modules" name="scala-pickling_2.10" conf="compile, runtime" rev="2.0.1" rev-constraint-default="2.0.1" rev-constraint-dynamic="2.0.1" callerrev="0.10.1"/>
 				<artifacts>
 					<artifact name="quasiquotes_2.10" type="jar" ext="jar" status="no" details="" size="720704" time="0" location="/home/robertk/.ivy2/cache/org.scalamacros/quasiquotes_2.10/jars/quasiquotes_2.10-2.0.1.jar">
@@ -667,7 +667,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-reflect">
-			<revision name="2.10.6" status="release" pubdate="20150918193538" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.6/" downloaded="false" searched="false" default="false" conf="master(*), default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="6">
+			<revision name="2.10.6" status="release" pubdate="20150918193538" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.6/" downloaded="false" searched="false" default="false" conf="master(*), default, compile, runtime(*), runtime, default(compile), compile(*), master" position="6">
 				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
 				<metadata-artifact status="no" details="" size="2647" time="0" location="/home/robertk/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.6/scala-reflect-2.10.6.pom"/>
 				<caller organisation="org.scala-sbt" name="cache" conf="compile" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.13.13"/>
@@ -683,7 +683,7 @@
 			</revision>
 		</module>
 		<module organisation="org.scala-lang" name="scala-library">
-			<revision name="2.10.6" status="release" pubdate="20150918193528" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.6/" downloaded="false" searched="false" default="false" conf="default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="0">
+			<revision name="2.10.6" status="release" pubdate="20150918193528" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.6/" downloaded="false" searched="false" default="false" conf="default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master" position="0">
 				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
 				<metadata-artifact status="no" details="" size="2487" time="0" location="/home/robertk/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.6/scala-library-2.10.6.pom"/>
 				<caller organisation="org.scala-sbt" name="interface" conf="compile" rev="2.10.6" rev-constraint-default="2.10.6" rev-constraint-dynamic="2.10.6" callerrev="0.13.13"/>

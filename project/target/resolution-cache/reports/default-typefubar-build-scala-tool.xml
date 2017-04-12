@@ -9,7 +9,7 @@
 		extra-sbtVersion="0.13"
 		conf="scala-tool"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20161207092648"/>
+		date="20170322072751"/>
 	<dependencies>
 		<module organisation="org.scala-lang" name="scala-compiler">
 			<revision name="2.10.6" status="release" pubdate="20150918193547" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, optional, optional(default), master" position="0">
@@ -39,7 +39,7 @@
 		<module organisation="org.fusesource.jansi" name="jansi">
 			<revision name="1.4" status="release" pubdate="20100716002157" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://${forge-project-id}.fusesource.org" downloaded="false" searched="false" default="false" conf="master(*), compile, compile(*), master" position="4">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="3361" time="0" location="/home/robertk/.ivy2/cache/org.fusesource.jansi/jansi/ivy-1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.pom"/>
+				<metadata-artifact status="no" details="" size="3355" time="0" location="/home/robertk/.ivy2/cache/org.fusesource.jansi/jansi/ivy-1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/1.4/jansi-1.4.pom"/>
 				<caller organisation="org.scala-lang" name="jline" conf="compile" rev="1.4" rev-constraint-default="1.4" rev-constraint-dynamic="1.4" callerrev="2.10.6"/>
 				<artifacts>
 					<artifact name="jansi" type="jar" ext="jar" status="no" details="" size="106659" time="0" location="/home/robertk/.ivy2/cache/org.fusesource.jansi/jansi/jars/jansi-1.4.jar">

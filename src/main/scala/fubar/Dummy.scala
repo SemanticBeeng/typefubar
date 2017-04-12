@@ -81,15 +81,15 @@ object SomeApi {
     return out;
   }*/
 
-  def nonimplicitfail3[T](thing: T, shazam: MyTypeClass[T], sayThis: MyTypeClass[T]#In): shazam.Out = {
+ /* def nonimplicitfail3[T](thing: T, shazam: MyTypeClass[T], sayThis: MyTypeClass[T]#In): shazam.Out = {
     val out = shazam.almostDoMagic(thing, sayThis);
     return out;
-  }
+  }*/
 
   def voodoo[T, In0, Out0](foo: T, sayThis: In0)(implicit ev: MyTypeClass.Aux[T, In0, Out0]): Out0 = {
     val tc = MyTypeClass[T]
     tc.doMagic(foo, sayThis)
-    ev.doMagic(foo, sayThis)
+    // ev.doMagic(foo, sayThis)
   }
 
   def hoodoo[T, In0, Out0](foo: T, sayThis: In0)(implicit ev: MyTypeClass.Aux[T, In0, Out0]): Out0 = {
